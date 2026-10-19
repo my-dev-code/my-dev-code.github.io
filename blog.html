@@ -1,0 +1,24 @@
+---
+layout: default
+title: Все посты блога
+---
+
+<div class="posts-list">
+  {% for post in site.posts %}
+    <article class="post-preview">
+      <a href="{{ post.url | relative_url }}">
+        <h2 class="post-title">{{ post.title }}</h2>
+      </a>
+      <p class="post-meta">
+        Опубликовано {{ post.date | date: "%d %B %Y" }}
+      </p>
+      {% if post.subtitle %}
+        <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+      {% endif %}
+      <div class="post-entry">
+        {{ post.excerpt | strip_html | xml_escape | truncatewords: 50 }}
+      </div>
+      <a href="{{ post.url | relative_url }}" class="post-read">Читать далее →</a>
+    </article>
+  {% endfor %}
+</div>
