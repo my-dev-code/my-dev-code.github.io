@@ -5,6 +5,8 @@ subtitle: Excerpt from Soulshaping by Jeff Brown
 cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/path.jpg
+date: 2026-10-19
+categories: [программирование, python]
 tags: [books, test]
 author: Sharon Smith and Barry Simpson
 ---
