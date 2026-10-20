@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simple JS Python application
+title: Simple JS Python Flask application
 categories: [js]
 tags: [javascript, api]
 ---
