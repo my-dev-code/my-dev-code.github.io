@@ -1,0 +1,55 @@
+---
+layout: default
+title: Категории
+---
+
+{% for category in site.categories %}
+  <div class="category-section" id="{{ category[0] | slugify }}">
+    <h2>{{ category[0] | capitalize }}</h2>
+    
+    <ul class="posts-list">
+      {% assign posts_in_category = category[1] %}
+      {% for post in posts_in_category %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="post-date">{{ post.date | date: "%d.%m.%Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+
+<style>
+.category-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.category-section h2 {
+  color: #0366d6;
+  border-bottom: 2px solid #0366d6;
+  padding-bottom: 10px;
+}
+
+.posts-list {
+  list-style: none;
+  padding: 0;
+}
+
+.posts-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.posts-list li:last-child {
+  border-bottom: none;
+}
+
+.post-date {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+</style>
