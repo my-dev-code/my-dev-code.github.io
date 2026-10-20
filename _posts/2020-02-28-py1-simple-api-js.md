@@ -23,6 +23,9 @@ macOS/Linux: source venv/bin/activate
 
 pip install flask
 
+
+~~~
+
 my_website/
 │
 ├── venv/                # (Папка с окружением, не трогаем)
@@ -38,6 +41,7 @@ my_website/
 ├── app.py               # Главный файл Python (точка входа)
 └── requirements.txt     # Список зависимостей
 
+~~~
 
 app.py (Бэкенд на Python):
 
@@ -65,6 +69,8 @@ if __name__ == '__main__':
 
 templates/index.html
 
+```html
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -81,6 +87,7 @@ templates/index.html
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
+```
 
 static/js/script.js
 ```javascript
