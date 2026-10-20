@@ -7,7 +7,7 @@ tags: [javascript, api]
 
 
 In VS Code
-
+~~~
 mkdir my_website
 cd my_website
 python -m venv venv   # Создаем изолированное окружение
@@ -22,7 +22,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser)
 macOS/Linux: source venv/bin/activate
 
 pip install flask
-
+~~~
 
 ~~~
 
