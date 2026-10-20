@@ -80,7 +80,7 @@ templates/index.html
 </html>
 
 static/js/script.js
-
+```javascript
 document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('myButton');
     const resultText = document.getElementById('result');
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultText.textContent = data.message;
     });
 });
-
+```
 python app.py
 
 
