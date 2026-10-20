@@ -1,1 +1,69 @@
+---
+layout: default
+title: Категории
+---
 
+<h1>Все категории</h1>
+
+<div class="categories-list">
+  {% assign categories_list = site.categories %}
+  
+  {% if categories_list.first[0] == null %}
+    {% for category in categories_list %}
+      <div class="category-item">
+        <h3>
+          <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">
+            {{ category | capitalize }}
+          </a>
+          <span class="post-count">({{ site.categories[category].size }})</span>
+        </h3>
+      </div>
+    {% endfor %}
+  {% else %}
+    {% for category in categories_list %}
+      <div class="category-item">
+        <h3>
+          <a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}">
+            {{ category[0] | capitalize }}
+          </a>
+          <span class="post-count">({{ category[1].size }})</span>
+        </h3>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
+
+<style>
+.categories-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.category-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #0366d6;
+}
+
+.category-item h3 {
+  margin: 0;
+}
+
+.category-item a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.category-item a:hover {
+  text-decoration: underline;
+}
+
+.post-count {
+  color: #666;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+</style>
