@@ -40,7 +40,9 @@ my_website/
 
 
 app.py (Бэкенд на Python):
+
 ~~~
+
 from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
@@ -58,6 +60,7 @@ def get_data():
 if __name__ == '__main__':
     # debug=True заставляет сервер перезагружаться при изменении кода
     app.run(debug=True) 
+
 ~~~
 
 templates/index.html
